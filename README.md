@@ -4,8 +4,18 @@
 可以在编辑器的命令行播放歌词
 
 ## 用法
+编译
 ```
-lyric w.lrc
+go build -o lyric main.go
+```
+把可执行程序移到环境变量所在目录  
+例如linux环境
+```
+mv lyric /usr/bin/
+```
+播放显示示例歌词
+```
+lyric demo(secret_base).lrc
 ```
 ![使用演示](./show.gif)
 

@@ -38,24 +38,19 @@ func main() {
 		nums = append(nums, newTime.Milliseconds())
 	}
 
-
 	//播放
-	begin := time.Now()
+	var numTemp int64
+	numTemp = 0
 	//nums := []int{1000,2000,3000}
 	for key, num := range nums {
+		time.Sleep(time.Duration(num - numTemp) * time.Millisecond)
 
-		now := begin.Add( time.Duration(num) * time.Millisecond)
-		for {
-			if time.Now().After(now) {
-				re := regexp.MustCompile(`\[.*\]`)
-				content := re.ReplaceAllString(linesStr[key], "")
-				fmt.Println(content)
-				break
-			}
-		}
+		re := regexp.MustCompile(`\[.*\]`)
+		content := re.ReplaceAllString(linesStr[key], "")
+
+		fmt.Println(content)
+		numTemp = num
 	}
-
-
 
 
 }
