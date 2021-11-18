@@ -7,7 +7,7 @@
 ```
 lyric w.lrc
 ```
-[使用演示](https://gitee.com/bao7/lyrics-in-terminal/raw/master/show.gif)
+![使用演示](./show.gif)
 
 ## 歌词下载地址推荐
  https://www.22lrc.com/
