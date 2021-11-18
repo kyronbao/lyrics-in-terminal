@@ -19,5 +19,8 @@ lyric demo(secret_base).lrc
 ```
 ![使用演示](./show.gif)
 
+ps.  
+单曲循环需要保证歌词的最后一行的时间和歌曲时间大小一致
+
 ## 歌词下载地址推荐
  https://www.22lrc.com/

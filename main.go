@@ -39,17 +39,19 @@ func main() {
 	}
 
 	//播放
-	var numTemp int64
-	numTemp = 0
-	//nums := []int{1000,2000,3000}
-	for key, num := range nums {
-		time.Sleep(time.Duration(num - numTemp) * time.Millisecond)
+	for {
+		var numTemp int64
+		numTemp = 0
+		//nums := []int{1000,2000,3000}
+		for key, num := range nums {
+			time.Sleep(time.Duration(num - numTemp) * time.Millisecond)
 
-		re := regexp.MustCompile(`\[.*\]`)
-		content := re.ReplaceAllString(linesStr[key], "")
+			re := regexp.MustCompile(`\[.*\]`)
+			content := re.ReplaceAllString(linesStr[key], "")
 
-		fmt.Println(content)
-		numTemp = num
+			fmt.Println(content)
+			numTemp = num
+		}
 	}
 
 
